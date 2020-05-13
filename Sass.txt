@@ -1,0 +1,12 @@
+hover, focus ec...
+&::focus{}
+
+To import file , add _namefile.sass and in another file use import
+@import('namefile');
+
+To include more instructions in a class, definite the piece of code
+@mixin name{
+    code
+}
+
+@include name() --> in a class to use these instructions

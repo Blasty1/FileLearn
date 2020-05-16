@@ -1,0 +1,118 @@
+.forEach(value,value_again, tecnology(set,map,arrayy ecc..))
+
+Math
+    Math.E --> e 
+    Math.PI --> pigreco
+    Math.sqrt --> radice quadrato
+    Math.max() --> max 
+    Math.abs --> numeri assoluti
+    Math.pow() --> numeri elevati 
+    Math.min() --> numeri più bassi
+    math.round() --> per arrotondare
+    Math.random() --> numeri random da 0 a 1
+
+Array - String
+    a.pop() -> rimuove item finale
+    a.push() -> aggiunge item alla finale
+    a.shift() -> rimuove item iniziale
+    a.unshift() -> aggiunge item all'inizio
+
+    stringa.CharAt('index');
+    stringa.replace(' ','-'); 
+    a.splice(dove_parte,cosa_e limina,elementi_da_aggiungere...)
+    a.slice(tostart,toend); -> subarray
+    a.concat(other_array); -> concat two or more array
+    a.indexOf(items_into_array) -> se non c'è ritorna -1
+    a.includes(items_into_Array) -> serve per controllare se un elemento c'è oppure // NOTE:
+    a.find(item => item.id == 1 ); --> ritorna true se lo trova e undefined se non lo trova
+    a.filter(item => item.id == 'ab') --> ritornam l'array con tutti gli elementi che soddisfano la condizione (se non ce ne sono ritorna un array vuoto)
+    a.sort() -> ritorna un array ordinato(in base all oggetto trattato come stringa)
+    a.reverse()-> reverse the array
+    a.split(',')-> crea un array della stringa
+    a.join('') -> da un array crea una stringa
+    a.isArray() -> ritorna vero se è un isArray
+    Array.from(valore) --> crea un array
+
+Map 
+    new Map('key' , value)
+    map.set(key,value) ->nuovi valori aggiunti
+    map.get(key) --> ottengo il valore
+    map.has(key) --> ritorna true se esiste la key
+    map.delete(key) --> elimina il valore
+    map.size ->ritorna il numero degli elementi
+    map.keys() -> tutte le keys
+    map.values() -> tutti i valori
+    new map(Object.entries(object)) --> trasforma da un oggetto a una Map
+    Object.fromEntries(map) --> ritorna un array key :  values
+
+Set(valori non si p ossono ripetere)
+    set.add(valore) ritorna il valore
+    set.delete(valore) ritorna true se lo elimina
+    set.has(valore) ritorna true se ci sta nella Set
+    set.size ritorna il numero degli elementi
+    set.clear() rimuove tutti gli elementi
+
+    set.keys() -> ritorna tutte i valori come un oggetto
+    set.values() -> ritorna tutti i valori come un oggetto
+
+WeakMap }  Servono perchè nel caso in cui un oggetti venga eliminato, si elimina pure all'interno della lista
+WeakSet }
+
+Date
+    new Date() --> timestamp ora
+    date().getTime() -> otteniamo la data in millisecondi
+    new Date(Date.parse('stringa_contenente_data')) --> converto una semplice stringa in una data
+
+JSON
+    JSON.strinfy(object) --> coodifica l'oggetto in una stringa
+    JSON.parse(text) --> coodifica la stringa in un oggetto
+
+Time
+    setTimeout(function(senza parentesi),millisecondi,parametri della funzione) --> dopo tot secondi esegue la funzione
+    setInterval(function, millisecondi, parametri) --> esegue la funzione con l'intervallo di tot millisecondi
+    example:
+            let id=setInterval(hello,10);
+            setTimeout(() => clearInterval(id),5000);
+
+DOM
+    document.getElementById('id').style -> modifichiamo lo stile 
+    document.getElementById('id').textContent='nuovo titolo' -> modifichiamo il testo all'interno
+    document.querySelector('#id' or '.class') --> metodo più potente per selezionare roba e modificare
+    document.querySelector('li:nth-child(numero_form)') --> selezionare all'interno di una lista 
+    document.getElementsByClassName('collection-item'); --> ottengo un array 
+    list.childNodes --> otteniamo tutti i figli di una classe, come un array di text e del contenuto
+    list.children --> otteniamo dati html , è un oggetto
+    list.parentNode --> rilascia l'oggetto superiore , codice html
+    classList --> lista delle classi
+    CREATE ELEMENT
+            li=const li=document.createElement('li'); --> creo l'elemento
+            li.className='collection-item'; --> aggiungo una classe
+            li.id="new_item" --> aggiungo un ig
+            li.setAttribute('title','New Item'); --> setto gli attributi
+            li.appendChild(document.createTextNode('Hello world')); --> creo un node 
+            document.querySelector('ul.collection').appendChild(li) -->il node lo appendo al div che ci interessa
+    REPLACE 
+            const newHeading=document.createElement('h2'); --> creo il nuovo elemento
+            newHeading.id='task-title'; --> appendo ad un id
+            newHeading.appendChild(document.createTextNode('Task List')); --> creo il node
+            const oldHeading=document.getElementById('task-title'); --> ottengo il vecchio elemento
+            const cardAction=document.querySelector('.card-action'); --> ottengo il parent del vecchio elemento
+            cardAction.replaceChild(newHeading,oldHeading); --> replace the old element with the new element
+    REMOVE
+            obj.remove();
+            obj.style.display='none';
+    Event type
+            obj.addEventListener(type_of_event,function(senza parentesi)) --> applicare un evento e una funzione a una classe
+            mouseover ->mouse ci passa sopra
+            click -> se clicchiamo
+            dblclick --> doppio click
+
+            input
+            keydown --> quando si clicca avviene
+            keyup --> dopo cliccato avviene
+            focus --> quando schiacciamo o passiamo sopra 
+            cut --> quando utilizziatmo taglia 
+            paste --> quando copiamo qualcosa
+            input --> tutto ciò che facciamo(una sorta di tutti gli eventi elencati in uno)
+
+            

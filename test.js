@@ -25,7 +25,25 @@ function countBs(name,letter='B'){
         return "Errore, non è una stringa";
     }
 }
+let obj={
+    name : 'Bryan',
+    surname : 'Test'
+};
 
-console.log(countBs('kkkkks','k'));
-console.log(countBs('BBC'))
-console.log(min(-6,1));
+function range_test(tostart,toend){
+    let result=[];
+    for(let i=tostart; i <= toend; i++ ){
+        result.push(i);
+    }
+    return result;
+}
+
+function sum_test(numbers){
+    let result=0;
+    for(let entry of numbers){
+        result+=entry;
+    }
+    return result;
+}
+
+console.log(range_test(10,5))

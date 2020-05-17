@@ -17,21 +17,30 @@ Array - String
     a.shift() -> rimuove item iniziale
     a.unshift() -> aggiunge item all'inizio
 
+    for (let value_of_array of Array) --> simile al foreach in php
+
     stringa.CharAt('index');
     stringa.replace(' ','-'); 
     a.splice(dove_parte,cosa_e limina,elementi_da_aggiungere...)
-    a.slice(tostart,toend); -> subarray
+    a.slice(tostart,toend); -> subarray, tostart viene preso, toend non viene preso
     a.concat(other_array); -> concat two or more array
-    a.indexOf(items_into_array) -> se non c'è ritorna -1
+    a.indexOf(items_into_array) -> cerca un elemento e ritorna l'indice se non c'è ritorna -1
     a.includes(items_into_Array) -> serve per controllare se un elemento c'è oppure // NOTE:
     a.find(item => item.id == 1 ); --> ritorna true se lo trova e undefined se non lo trova
     a.filter(item => item.id == 'ab') --> ritornam l'array con tutti gli elementi che soddisfano la condizione (se non ce ne sono ritorna un array vuoto)
     a.sort() -> ritorna un array ordinato(in base all oggetto trattato come stringa)
     a.reverse()-> reverse the array
-    a.split(',')-> crea un array della stringa
+    a.split(' ')-> nella stringa datagli la divide e crea un array in base al carattere passato tra parentesi
     a.join('') -> da un array crea una stringa
     a.isArray() -> ritorna vero se è un isArray
+    stringa.trim() -> rimuove gli spazi
     Array.from(valore) --> crea un array
+
+Object 
+    delete object.propetry;
+    (propetry in object) --> ritorna falso se non c'è la proprietrà nell'oggetto
+    Object.keys(name_obj) --> ritorna tutte le key in un array
+    Object.assign(obj_to,object_from) --> il secondo obj viene copiato nel primo
 
 Map 
     new Map('key' , value)
@@ -64,7 +73,7 @@ Date
     new Date(Date.parse('stringa_contenente_data')) --> converto una semplice stringa in una data
 
 JSON
-    JSON.strinfy(object) --> coodifica l'oggetto in una stringa
+    JSON.stringify(object) --> coodifica l'oggetto in una stringa
     JSON.parse(text) --> coodifica la stringa in un oggetto
 
 Time

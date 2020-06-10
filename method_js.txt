@@ -10,8 +10,16 @@ Math
     Math.min() --> numeri più bassi
     math.round() --> per arrotondare
     Math.random() --> numeri random da 0 a 1
+String(immutable, each method returns new string ) (UTF-16)
+    stringa.charAt(0) or stringa[0] -> 'a' , ritorna il carattere
+    stringa.substring(2,4) -> ritorn solo 3 e 4 
+    stringa.slice(2,4) -> fa la stessa cosa
+    stringa.indexOf('a') -> return the number position of letter a 
+    stringa.split(" ") --> return substrings each space 
+    stringa.replace("test","TEWST") -> replace the word test with TEWST
 
-Array - String
+
+Array 
     a.pop() -> rimuove item finale
     a.push() -> aggiunge item alla finale
     a.shift() -> rimuove item iniziale

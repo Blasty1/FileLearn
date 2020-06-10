@@ -30,10 +30,16 @@ let obj={
     surname : 'Test'
 };
 
-function range_test(tostart,toend){
+function range_test(tostart,toend,add_numb=1){
     let result=[];
-    for(let i=tostart; i <= toend; i++ ){
+    if(tostart < toend){
+    for(let i=tostart; i <= toend; i += add_numb ){
         result.push(i);
+    } 
+    }else{
+        for(let i=tostart; i >= toend; i -= add_numb){
+            result.push(i);
+        }
     }
     return result;
 }
@@ -46,4 +52,51 @@ function sum_test(numbers){
     return result;
 }
 
-console.log(range_test(10,5))
+function reverseArray(array_from){
+    let result=[]
+    for(let i=array_from.length-1; i >= 0; i-- ){
+        result.push(array_from[i]);
+    }
+    return result
+}
+
+function reverseArrayInPlace(array_from){
+    let new_array=reverseArray(array_from);
+    for(let i=0; i < array_from.length; i++){
+        array_from[i]=new_array[i]
+    }
+    return array_from
+    
+}
+
+
+function deepEqual(obj1,obj2){
+    let propret1=Object.keys(obj1);
+    let propret2=Object.keys(obj2);
+    for(let i = 0;i < propret1.length; i++ ){
+        if(propret1[i] != propret2[i]){
+            console.log("sono diversi")
+            break;
+        }else{
+            for(let key of obj1){
+                obj1[key]
+            }
+        }
+    }
+}
+let test1=[6,3,5,10,2,9];
+let ops={
+    test : 1,
+    ok : 2,
+    test3 : {
+        tes : 5
+    }
+}
+let ops2={
+    test : 1,
+    o : 2,
+    test3 : {
+        tes : 5
+    }
+}
+deepEqual(ops,ops2)

@@ -10,6 +10,7 @@ Math
     Math.min() --> numeri più bassi
     math.round() --> per arrotondare
     Math.random() --> numeri random da 0 a 1
+
 String(immutable, each method returns new string ) (UTF-16)
     stringa.charAt(0) or stringa[0] -> 'a' , ritorna il carattere
     stringa.substring(2,4) -> ritorn solo 3 e 4 
@@ -17,7 +18,13 @@ String(immutable, each method returns new string ) (UTF-16)
     stringa.indexOf('a') -> return the number position of letter a 
     stringa.split(" ") --> return substrings each space 
     stringa.replace("test","TEWST") -> replace the word test with TEWST
+    parseInt((stringa)) --> return only number
+    parseFloat(stringa) --> return onlu number with point, float number
 
+Convertions of Object
+    object.toString() --> array --> return the items divided by comma
+                      --> function --> return source code
+                      --> object --> return source code ([object Object])
 
 Array 
     a.pop() -> rimuove item finale

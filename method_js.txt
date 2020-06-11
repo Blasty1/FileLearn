@@ -1,5 +1,9 @@
 .forEach(value,value_again, tecnology(set,map,arrayy ecc..))
 
+&& || ! return values
+    a && b --> ritorna A se è falso, e B se A è vero [SE A È VERO ALLORA FACCIO B]
+    a || b --> ritorna a è se è vero, altrimenti b (SE A È VERO LO RITORNO)
+
 Math
     Math.E --> e 
     Math.PI --> pigreco
@@ -12,6 +16,7 @@ Math
     Math.random() --> numeri random da 0 a 1
 
 String(immutable, each method returns new string ) (UTF-16)
+
     stringa.charAt(0) or stringa[0] -> 'a' , ritorna il carattere
     stringa.substring(2,4) -> ritorn solo 3 e 4 
     stringa.slice(2,4) -> fa la stessa cosa
@@ -33,7 +38,7 @@ Array
     a.unshift() -> aggiunge item all'inizio
 
     for (let value_of_array of Array) --> simile al foreach in php
-
+    (value in array) --> ritorna true se l'item c'è nell'oggetto(array)
     stringa.CharAt('index');
     stringa.replace(' ','-'); 
     a.splice(dove_parte,cosa_e limina,elementi_da_aggiungere...)
@@ -47,7 +52,10 @@ Array
     a.reverse()-> reverse the array
     a.split(' ')-> nella stringa datagli la divide e crea un array in base al carattere passato tra parentesi
     a.join('') -> da un array crea una stringa
-    a.isArray() -> ritorna vero se è un isArray
+
+    Capire se è un array
+        a.isArray() -> ritorna vero se è un isArray
+        a instanceof Array --> ritorna true se è un array
     stringa.trim() -> rimuove gli spazi
     Array.from(valore) --> crea un array
 

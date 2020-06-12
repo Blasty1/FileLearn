@@ -63,6 +63,17 @@ Array
     Array.from(valore) --> crea un array
 
 Object 
+    Attributi degli oggetti: ne sono tre
+                            Object's prototype --> è un riferimento all'oggetto padre da cui proviene il nostro oggetto 
+                            Object's class --> è una stringa che cataloga il tipo di un oggetto
+                            Object's extensible --> indica se è possibile aggiungere proprietà 
+
+    Attributi delle proprietà di un oggetto (sono 3)
+                            writable --> se il valore della proprietà puo essere modificat0
+                            enumerable --> se la proprietà proviene da un ciclo for-in
+                            configurable --> se la proprietà puo essere eliminata o modificata
+
+    Object.create(prototype_to_use,new_properties) --> crea un nuovo oggetto ereditanto il prototipo di un altro by reference --> se modifico l'oggetto di partenza modifico anche quello nuovo
     delete object.propetry;
     (propetry in object) --> ritorna falso se non c'è la proprietrà nell'oggetto
     Object.keys(name_obj) --> ritorna tutte le key in un array

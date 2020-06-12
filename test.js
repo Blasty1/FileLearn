@@ -12,4 +12,27 @@ function test(){
     }
 }
 
-test()
+function test_object(){
+    let a=10,b={
+        for : 10,
+        am : 100,
+        b : 'ok'
+    }
+
+   
+    return Object.getPrototypeOf(a) 
+}
+function change_prototype(){
+    let a={
+        a : 10,
+        b: 100
+    }
+    return a
+}
+let a={
+    a : 10,
+    b: 100
+}
+let new_ob=Object.create(a)
+a.a='ok'
+console.log(new_ob.a)

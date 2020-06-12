@@ -4,6 +4,10 @@
     a && b --> ritorna A se è falso, e B se A è vero [SE A È VERO ALLORA FACCIO B]
     a || b --> ritorna a è se è vero, altrimenti b (SE A È VERO LO RITORNO)
 
+for(let key in array){ console.log(array[key])} --> utilizabile con tutti gli oggetti(Stringa, array, object) 
+
+class Error
+    throw new Error('errore bro') --> per generare un errore
 Math
     Math.E --> e 
     Math.PI --> pigreco
@@ -16,7 +20,6 @@ Math
     Math.random() --> numeri random da 0 a 1
 
 String(immutable, each method returns new string ) (UTF-16)
-
     stringa.charAt(0) or stringa[0] -> 'a' , ritorna il carattere
     stringa.substring(2,4) -> ritorn solo 3 e 4 
     stringa.slice(2,4) -> fa la stessa cosa

@@ -75,7 +75,17 @@ Object
 
     Object.create(prototype_to_use,new_properties) --> crea un nuovo oggetto ereditanto il prototipo di un altro by reference --> se modifico l'oggetto di partenza modifico anche quello nuovo
     delete object.propetry;
-    (propetry in object) --> ritorna falso se non c'è la proprietrà nell'oggetto
+    (propetry in object) --> ritorna falso se non c'è la proprietrà nell'oggetto o nei prototipi relazionati
+    object.hasOwnProperty('name_of_property') --> ritorna true solo se l'oggetto possiede quella proprietà (non guarda i proptotipi ereditati)
+    Object.getOwnPropertyDescriptor(object_to_search,'name_of_property') --> ritorna le quattro configurazioni della proprietà : value, writable,enumerable,configurable oppure get,set,enumerable,configurable
+    Object.defineProperty(object,'name_of_property',{
+        value = 'valore da assegnare',
+        writable = true(se la possiamo modificare),
+        configurable= true(se è configurabile successivamente),
+        enumerable = false (se è nascosta durante i cicli),
+        get : function() { body } (aggiungere un get privato alla proprietà)
+        set : function () {body} (aggiungere un set privato alla proprietà)
+    })
     Object.keys(name_obj) --> ritorna tutte le key in un array
     Object.assign(obj_to,object_from) --> il secondo obj viene copiato nel primo
 

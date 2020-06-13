@@ -29,10 +29,26 @@ function change_prototype(){
     }
     return a
 }
-let a={
-    a : 10,
-    b: 100
+let p={
+    $test : 10,
+    b:100,
+    $a:10,
+
+    get test(){
+        return this.$test;
+    },
+
+    set test(test){
+        if((typeof test == 'number')){
+            this.$test=test;
+        }
+    }
 }
-let new_ob=Object.create(a)
-a.a='ok'
-console.log(new_ob.a)
+Object.defineProperty(p , 'ok' , {
+    enumerable : true,
+    get :  function() { return },
+    set : function(value) { this.giovanni = value + "so troppo forte"}
+    });
+p.test=1000
+p.a=100
+console.log(p.ok)

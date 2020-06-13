@@ -86,8 +86,15 @@ Object
         get : function() { body } (aggiungere un get privato alla proprietà)
         set : function () {body} (aggiungere un set privato alla proprietà)
     })
+    Object.getPrototypeOf(object) --> return the prototype of a object
+    object1.isPrototypeOf(objecy2) --> return if the prototype of first object is inheredit from the second object
     Object.keys(name_obj) --> ritorna tutte le key in un array
     Object.assign(obj_to,object_from) --> il secondo obj viene copiato nel primo
+    Object.prototype.toString.call(obj).slice(8,-1) --> to get the class of object
+    Object.isExtensible(object) --> return true if the extensible's attribute is true
+    Object.preventExtension(obj) --> rende l'oggetto non pù estendibile e non si puo più cambiare
+    Object.freeze(obj) --> rende l'oggetto non configurabile , read-only e nonextensible
+    function.call(object) --> fa si che la funzione diventi un metodo dell'oggetto(ricordati di this)
 
 Map 
     new Map('key' , value)

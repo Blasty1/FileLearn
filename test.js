@@ -32,23 +32,45 @@ function change_prototype(){
 let p={
     $test : 10,
     b:100,
-    $a:10,
+    $a:10
 
-    get test(){
-        return this.$test;
-    },
-
-    set test(test){
-        if((typeof test == 'number')){
-            this.$test=test;
-        }
-    }
 }
 Object.defineProperty(p , 'ok' , {
-    enumerable : true,
-    get :  function() { return },
+    enumerable : false,
+    get :  function() { return this.giovanni},
     set : function(value) { this.giovanni = value + "so troppo forte"}
     });
-p.test=1000
-p.a=100
-console.log(p.ok)
+Object.defineProperty(p,'prova',{
+    enumerable : false,
+    get : function(){
+        return (this.prov || 10);
+    },
+
+    set : function(test){
+        if((typeof test == 'number')){
+            this.prov=test;
+        }
+    }
+})
+/**
+ * @param  {Object} p
+ */
+function ciclate(p){
+    for ( let key in p){
+        console.log(key + ": "+p[key])
+    }
+}
+
+function fa(){
+    this.a=100;
+    console.log(this.b*5)
+}
+function c(...a){
+    for(let key in a){
+    console.log(a[key])
+}
+}
+let u=Object.create(p)
+let k = p
+p.b=10
+c(Object.preventExtensions(p),Object.isExtensible(p))

@@ -70,7 +70,13 @@ function c(...a){
     console.log(a[key])
 }
 }
-let u=Object.create(p)
-let k = p
-p.b=10
-c(Object.preventExtensions(p),Object.isExtensible(p))
+
+function moltiplicaEritorna(x){
+    c(x*x);
+}
+let y=[1,2,3,4,5,6,10]
+c(y.slice(2,-1),y[-1])
+c(y.reverse())
+let ci= y.map(( x => x*x+5))
+c(ci, y)
+y.forEach((v, key, a) => c(a[key] == v))

@@ -1,4 +1,4 @@
-.forEach(value,value_again, tecnology(set,map,arrayy ecc..))
+.forEach(value,key,array)
 
 && || ! return values
     a && b --> ritorna A se è falso, e B se A è vero [SE A È VERO ALLORA FACCIO B]
@@ -41,6 +41,8 @@ Array
     a.unshift() -> aggiunge item all'inizio
 
     for (let value_of_array of Array) --> simile al foreach in php
+    array.forEach(function())
+
     (value in array) --> ritorna true se l'item c'è nell'oggetto(array)
     stringa.CharAt('index');
     stringa.replace(' ','-'); 
@@ -54,7 +56,8 @@ Array
     a.sort() -> ritorna un array ordinato(in base all oggetto trattato come stringa)
     a.reverse()-> reverse the array
     a.split(' ')-> nella stringa datagli la divide e crea un array in base al carattere passato tra parentesi
-    a.join('') -> da un array crea una stringa
+    string.join('') -> da un array crea una stringa
+    let ok = new Array(10) --> return an array with ten element
 
     Capire se è un array
         a.isArray() -> ritorna vero se è un isArray
@@ -97,6 +100,7 @@ Object
     function.call(object) --> fa si che la funzione diventi un metodo dell'oggetto(ricordati di this)
 
 Map 
+    let new_array = a.map(x => return x*2) --> map ritorna un nuovo array senza modificare quello vecchio
     new Map('key' , value)
     map.set(key,value) ->nuovi valori aggiunti
     map.get(key) --> ottengo il valore

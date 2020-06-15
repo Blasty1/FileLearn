@@ -65,9 +65,10 @@ function fa(){
     this.a=100;
     console.log(this.b*5)
 }
+
 function c(...a){
     for(let key in a){
-    console.log(a[key])
+        console.log(a[key])
 }
 }
 
@@ -75,8 +76,54 @@ function moltiplicaEritorna(x){
     c(x*x);
 }
 let y=[1,2,3,4,5,6,10]
-c(y.slice(2,-1),y[-1])
-c(y.reverse())
-let ci= y.map(( x => x*x+5))
-c(ci, y)
-y.forEach((v, key, a) => c(a[key] == v))
+let d = y.filter(x => x >= 10/2)
+d.push('ok')
+let cop=d.reduce((x,y) => x+y, 0)
+
+function test1(a,b){
+    if (typeof a !== 'number' || typeof b !== 'number')  throw new Error('Inserisci due numeri') 
+    let c=  a+b 
+    arguments[0]=10
+    console.log(a)
+}
+sum.use=0
+function sum(a){
+    if(!Array.isArray(a)) throw new Error('solo array')
+    let somma=0;
+    for( let key in a){
+        if (!a[key] || (typeof a[key]) == 'string') continue
+        somma += a[key]
+        sum.use++
+    }
+    return [somma, sum.use]
+}
+function chain_scope(){
+    let testok=10;
+    function ok1(){
+        return testok
+    }
+
+    return ok1
+}
+let ok={
+    ok2 :10,
+    ciaso :20,
+    name : 'bryan',
+    ok1(){
+        return this.ok2
+    },
+    ciao : () => this.ok2
+}
+function play_name(saluto){
+    console.log(saluto+" "+this.name)
+}
+play_name.call(ok,'ciao')
+let testok=20
+c(chain_scope()())
+ok.pell='okok'
+test1(1,0)
+let pol= sum
+pol([1,2,3,4,'ok',null,'90',90])
+pol([1,2,3,4,'ok',null,'90',90])
+pol([1,2,3,4,'ok',null,'90',90])
+c(pol([1,2,3,4,'ok',null,'90',90]))

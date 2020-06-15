@@ -6,8 +6,15 @@
 
 for(let key in array){ console.log(array[key])} --> utilizabile con tutti gli oggetti(Stringa, array, object) 
 
+Function(object)
+    arguments --> return all parametrs of function , it is a object(like array)
+    function ok(x) return x*x; let ok1= ok; ok1(x) --> è possibile, il nome è solo un identificatore
+    name_function.proprietry=0; --> si puo assegnare anche una proprietà alla funzione(salvare il numero delle volte che viene chiamata)
+
+    var new_name = function.bind(object,default_parametr) --> ritorna una funzione utilizzabile come metodo dell'oggetto
 class Error
     throw new Error('errore bro') --> per generare un errore
+
 Math
     Math.E --> e 
     Math.PI --> pigreco
@@ -58,9 +65,12 @@ Array
     a.split(' ')-> nella stringa datagli la divide e crea un array in base al carattere passato tra parentesi
     string.join('') -> da un array crea una stringa
     let ok = new Array(10) --> return an array with ten element
+    a.every( x => x > 0) --> ritorna vero se tutti gli elementi dell'array soddisfano la condizione
+    a.some( x => x > 0 )--> ritorna verso se almeno uno degli elementi soddisfa la condizione
+    a.reduce((x,y) => x+y,0) --> ritorna un risultato unico, il primo è una funzione mentre il secondo è il valore di partenza di y
 
     Capire se è un array
-        a.isArray() -> ritorna vero se è un isArray
+        Array.isArray(value) -> ritorna vero se è un isArray
         a instanceof Array --> ritorna true se è un array
     stringa.trim() -> rimuove gli spazi
     Array.from(valore) --> crea un array
@@ -97,7 +107,7 @@ Object
     Object.isExtensible(object) --> return true if the extensible's attribute is true
     Object.preventExtension(obj) --> rende l'oggetto non pù estendibile e non si puo più cambiare
     Object.freeze(obj) --> rende l'oggetto non configurabile , read-only e nonextensible
-    function.call(object) --> fa si che la funzione diventi un metodo dell'oggetto(ricordati di this)
+    function.call(object,[parametrs_of_function]) --> fa si che la funzione diventi un metodo dell'oggetto(ricordati di this)
 
 Map 
     let new_array = a.map(x => return x*2) --> map ritorna un nuovo array senza modificare quello vecchio

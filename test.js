@@ -117,6 +117,21 @@ let ok={
 function play_name(saluto){
     console.log(saluto+" "+this.name)
 }
+function DetailsProfile(name,password,email){
+    this.name=name
+    this.password=password
+    this.email=email
+    this.__proto__ ={
+        stampaNameEmail : () => console.log(this.name,this.password)
+    }
+}
+
+
+
+let ok101= new DetailsProfile('ok','cioao','okok')
+let test90=new DetailsProfile('oksdsd','cioadssdo','okodsdsdk')
+c((ok101 instanceof DetailsProfile) ||  (test90 instanceof DetailsProfile))
+c(ok101,test90)
 play_name.call(ok,'ciao')
 let testok=20
 c(chain_scope()())

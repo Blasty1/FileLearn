@@ -12,6 +12,7 @@ Function(object)
     name_function.proprietry=0; --> si puo assegnare anche una proprietà alla funzione(salvare il numero delle volte che viene chiamata)
 
     var new_name = function.bind(object,default_parametr) --> ritorna una funzione utilizzabile come metodo dell'oggetto
+
 class Error
     throw new Error('errore bro') --> per generare un errore
 
@@ -109,6 +110,12 @@ Object
     Object.freeze(obj) --> rende l'oggetto non configurabile , read-only e nonextensible
     function.call(object,[parametrs_of_function]) --> fa si che la funzione diventi un metodo dell'oggetto(ricordati di this)
 
+Class(constructors and prototypes)
+    new Constructors --> return a new object with Constructors' prototype (it is a simple function)
+    Constructors.prototype{} --> we can write the adding methods 
+    function Constructor(){ this.__proto__ = {methods}} --> it is the same things that we have made earlier
+
+    
 Map 
     let new_array = a.map(x => return x*2) --> map ritorna un nuovo array senza modificare quello vecchio
     new Map('key' , value)

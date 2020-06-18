@@ -175,6 +175,8 @@ DOM
     list.children --> otteniamo dati html , è un oggetto
     list.parentNode --> rilascia l'oggetto superiore , codice html
     classList --> lista delle classi
+    TABLE
+        table.rows[0].cells[0] --> to get the value of first row and first cell
     CREATE ELEMENT
             li=const li=document.createElement('li'); --> creo l'elemento
             li.className='collection-item'; --> aggiungo una classe

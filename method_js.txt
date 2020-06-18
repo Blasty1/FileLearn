@@ -16,7 +16,7 @@ Function(object)
 https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 
 extend-- import
-    extend name function -->nel file del file .mjs
+    export name function -->nel file del file .mjs
     import name function from 'file.mjs' --> per importare la funzione o la classe
 
 class Error
@@ -168,6 +168,7 @@ DOM
     document.getElementById('id').style -> modifichiamo lo stile 
     document.getElementById('id').textContent='nuovo titolo' -> modifichiamo il testo all'interno
     document.querySelector('#id' or '.class') --> metodo più potente per selezionare roba e modificare
+    documeny.querySelectorAll() --> ritorna più di un elemento
     document.querySelector('li:nth-child(numero_form)') --> selezionare all'interno di una lista 
     document.getElementsByClassName('collection-item'); --> ottengo un array 
     list.childNodes --> otteniamo tutti i figli di una classe, come un array di text e del contenuto
@@ -189,7 +190,7 @@ DOM
             const cardAction=document.querySelector('.card-action'); --> ottengo il parent del vecchio elemento
             cardAction.replaceChild(newHeading,oldHeading); --> replace the old element with the new element
     REMOVE
-            obj.remove();
+            obj.remove(); --> remove a child
             obj.style.display='none';
     Event type
             obj.addEventListener(type_of_event,function(senza parentesi)) --> applicare un evento e una funzione a una classe

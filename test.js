@@ -1,4 +1,4 @@
-
+import { Test }   from '/modules.mjs.js';
 function test(){
     let test1= [1,'okok','djdjs']
     test1={
@@ -125,9 +125,9 @@ function DetailsProfile(name,password,email){
         stampaNameEmail : () => console.log(this.name,this.password)
     }
 }
-
-
-
+const h1=document.querySelector('table')
+console.log(h1)
+let prova1= new Test(h1)
 let ok101= new DetailsProfile('ok','cioao','okok')
 let test90=new DetailsProfile('oksdsd','cioadssdo','okodsdsdk')
 c((ok101 instanceof DetailsProfile) ||  (test90 instanceof DetailsProfile))
@@ -142,3 +142,5 @@ pol([1,2,3,4,'ok',null,'90',90])
 pol([1,2,3,4,'ok',null,'90',90])
 pol([1,2,3,4,'ok',null,'90',90])
 c(pol([1,2,3,4,'ok',null,'90',90]))
+console.log('ok')
+prova1.change_title('10')

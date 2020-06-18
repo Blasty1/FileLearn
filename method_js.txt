@@ -13,6 +13,12 @@ Function(object)
 
     var new_name = function.bind(object,default_parametr) --> ritorna una funzione utilizzabile come metodo dell'oggetto
 
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
+
+extend-- import
+    extend name function -->nel file del file .mjs
+    import name function from 'file.mjs' --> per importare la funzione o la classe
+
 class Error
     throw new Error('errore bro') --> per generare un errore
 

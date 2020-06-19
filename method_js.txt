@@ -48,6 +48,17 @@ Convertions of Object
                       --> function --> return source code
                       --> object --> return source code ([object Object])
 
+Ajax(funziona in maniera asincrona)
+    http=new XMLHttpRequest() --> return a new object to answer the server
+    http.open('POST',link,true) --> il primo è il tipo di richiesta, il secondo il link del server e il terzo sela richiesta deve essere asincrona
+    http.onreadystatechange=function() --> when a answer is getting the function passed will used.
+
+    http.status --> se è 200 allora tutto ok, se è 404 non c'è o 403.
+    http.readyState --> se è 4 allora il risultato è stato ottenuto
+
+    http.responseText --> ritorna semplicemente il contenuto
+    http.responseXML-> ritorna l'xml
+
 Array 
     a.pop() -> rimuove item finale
     a.push() -> aggiunge item alla finale

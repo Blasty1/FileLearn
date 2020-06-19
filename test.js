@@ -127,7 +127,7 @@ function DetailsProfile(name,password,email){
 }
 const h1=document.querySelector('table')
 console.log(h1)
-let prova1= new Test(h1)
+
 let ok101= new DetailsProfile('ok','cioao','okok')
 let test90=new DetailsProfile('oksdsd','cioadssdo','okodsdsdk')
 c((ok101 instanceof DetailsProfile) ||  (test90 instanceof DetailsProfile))
@@ -142,5 +142,23 @@ pol([1,2,3,4,'ok',null,'90',90])
 pol([1,2,3,4,'ok',null,'90',90])
 pol([1,2,3,4,'ok',null,'90',90])
 c(pol([1,2,3,4,'ok',null,'90',90]))
-console.log('ok')
-prova1.change_title('10')
+
+let http= new XMLHttpRequest()
+http.onreadystatechange=fileToShow
+http.open('GET','test.php')
+http.send()
+
+
+
+
+
+
+function fileToShow(){
+    if (http.status === 200 && this.readyState === 4){
+
+        const title=document.createElement('h1');
+        title.appendChild(document.createTextNode(this.responseText))
+        document.querySelector('#body_test').appendChild(title)
+
+    }
+}

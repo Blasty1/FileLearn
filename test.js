@@ -1,5 +1,6 @@
 import { Testlo }   from '/modules.mjs.js';
 import { Exercise } from './modules.mjs.js';
+import { ToDoStatic } from './modules.mjs.js';
 function test(){
     let test1= [1,'okok','djdjs']
     test1={
@@ -154,7 +155,9 @@ ok101=new Testlo
 ok101.all_nodes()
 console.log(ok101.body)
 let ex= new Exercise()
-ex.firstDiv()
+
+let test190=new ToDoStatic('Esercizio Figo')
+
 
 function fileToShow(){
     if (http.status === 200 && this.readyState === 4){

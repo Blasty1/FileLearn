@@ -1,4 +1,4 @@
-export { Testlo , Exercise }
+export { Testlo , Exercise , ToDoStatic}
 class Testlo{
     body1 = document.querySelector('body')
     
@@ -44,4 +44,65 @@ class Exercise{
             table.rows[i].cells[i].style.backgroundColor='red'
         }
     }
+
+    clear(element){
+        
+        if(!element.children[0].children.length) return false
+        console.log('ojk')
+        element.innerHTML='';
+    }
+}
+
+class ToDoStatic{
+    
+
+    constructor(title){
+        this.title=title
+       
+        this.createStructure()
+    }
+
+    createStructure(){
+
+        const mainDiv=document.createElement('div');
+        mainDiv.className='ToDo'
+        document.body.append(mainDiv)
+
+        const titleDiv=document.createElement('h1')
+        titleDiv.textContent=this.title
+        mainDiv.append(titleDiv)
+
+        let tableShow= document.createElement('ul')
+        tableShow.className='ToDoList'
+        mainDiv.append(tableShow)
+
+
+        const inputToDo=document.createElement('input')
+        inputToDo.type="text"
+        inputToDo.name='thingstodo'
+        inputToDo.addEventListener('search',this.addLabel)
+        mainDiv.append(inputToDo)
+        
+        const buttonSubmit= document.createElement('button')
+        buttonSubmit.type='button'
+        buttonSubmit.append(document.createTextNode('Invia'))
+        mainDiv.append(buttonSubmit)
+
+        
+        
+
+
+    }
+
+    addLabel(){
+        let textContent1=this.value
+        const newLi=document.createElement('li')
+        newLi.append(document.createTextNode(textContent1))
+        document.querySelector('.ToDoList').append(newLi)
+        
+        
+    }
+
+
+
 }

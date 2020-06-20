@@ -177,7 +177,7 @@ Time
 
 DOM
     document.getElementById('id').style -> modifichiamo lo stile 
-    document.getElementById('id').textContent='nuovo titolo' -> modifichiamo il testo all'interno
+    element.textContent='nuovo titolo' -> modifichiamo il testo all'interno
     document.querySelector('#id' or '.class') --> metodo più potente per selezionare roba e modificare
     documeny.querySelectorAll() --> ritorna più di un elemento
     document.querySelector('li:nth-child(numero_form)') --> selezionare all'interno di una lista 
@@ -187,6 +187,10 @@ DOM
     list.children --> otteniamo dtutti gli oggetti presenti
     list.parentNode --> rilascia l'oggetto superiore , codice html
     classList --> lista delle classi
+
+    
+    <p  data-testo-a-cas='valore'></p> --> buona risorsa per i programmatori
+    element.dataset.dataTest
 
     list.nextElementSibiling
     list.previousElementSibiling
@@ -223,5 +227,5 @@ DOM
             cut --> quando utilizziatmo taglia 
             paste --> quando copiamo qualcosa
             input --> tutto ciò che facciamo(una sorta di tutti gli eventi elencati in uno)
-
+                  --> per input type=text quando scriviamo qualcosa
             

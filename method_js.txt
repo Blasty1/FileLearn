@@ -181,11 +181,16 @@ DOM
     document.querySelector('#id' or '.class') --> metodo più potente per selezionare roba e modificare
     documeny.querySelectorAll() --> ritorna più di un elemento
     document.querySelector('li:nth-child(numero_form)') --> selezionare all'interno di una lista 
+    document.querySelector('form[name="brutto"]') --> cerca nel dom un form con il name='brutto'
     document.getElementsByClassName('collection-item'); --> ottengo un array 
-    list.childNodes --> otteniamo tutti i figli di una classe, come un array di text e del contenuto
-    list.children --> otteniamo dati html , è un oggetto
+    list.childNodes --> otteniamo tutti i nodes(quindi anche i text e quant' altro)
+    list.children --> otteniamo dtutti gli oggetti presenti
     list.parentNode --> rilascia l'oggetto superiore , codice html
     classList --> lista delle classi
+
+    list.nextElementSibiling
+    list.previousElementSibiling
+    list.parentElement
     TABLE
         table.rows[0].cells[0] --> to get the value of first row and first cell
     CREATE ELEMENT

@@ -1,4 +1,5 @@
-import { Test }   from '/modules.mjs.js';
+import { Testlo }   from '/modules.mjs.js';
+import { Exercise } from './modules.mjs.js';
 function test(){
     let test1= [1,'okok','djdjs']
     test1={
@@ -149,9 +150,11 @@ http.open('GET','test.php')
 http.send()
 
 
-
-
-
+ok101=new Testlo
+ok101.all_nodes()
+console.log(ok101.body)
+let ex= new Exercise()
+ex.firstDiv()
 
 function fileToShow(){
     if (http.status === 200 && this.readyState === 4){

@@ -176,6 +176,8 @@ Time
             setTimeout(() => clearInterval(id),5000);
 
 DOM
+    document.documentElement.clientHeight --> ritorna l'altezza della finestra
+    document.documentElement.clientWidth --> ritorna la larghezza della finestra
     document.getElementById('id').style -> modifichiamo lo stile 
     element.textContent='nuovo titolo' -> modifichiamo il testo all'interno
     document.querySelector('#id' or '.class') --> metodo più potente per selezionare roba e modificare

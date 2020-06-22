@@ -152,7 +152,7 @@ http.onreadystatechange=fileToShow
 http.open('GET','test.php')
 http.send()
 
-
+console.log('test:'+document.documentElement.clientWidth)
 ok101=new Testlo
 ok101.all_nodes()
 console.log(ok101.body)

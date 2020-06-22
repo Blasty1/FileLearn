@@ -200,9 +200,13 @@ DOM
     CREATE ELEMENT
             li=const li=document.createElement('li'); --> creo l'elemento
             li.className='collection-item'; --> aggiungo una classe
+            li.classList.add('class') --> ritorna la classe precedente più quella nuova: prec nuova
+            li.classList.contains('class') --> ritorna vero se la classe è contenuta
             li.id="new_item" --> aggiungo un ig
+            let get1= getComputedStyle(object) --> we can use get1 to get the value of proprietries 
             li.setAttribute('title','New Item'); --> setto gli attributi
             li.appendChild(document.createTextNode('Hello world')); --> creo un node 
+            document.querySelectorAll('ul') --> ottengo tutti gli ul presenti nella pagina
             document.querySelector('ul.collection').appendChild(li) -->il node lo appendo al div che ci interessa
     REPLACE 
             const newHeading=document.createElement('h2'); --> creo il nuovo elemento
@@ -227,5 +231,5 @@ DOM
             cut --> quando utilizziatmo taglia 
             paste --> quando copiamo qualcosa
             input --> tutto ciò che facciamo(una sorta di tutti gli eventi elencati in uno)
-                  --> per input type=text quando scriviamo qualcosa
+                  --> per input type=text\ quando scriviamo qualcosa
             

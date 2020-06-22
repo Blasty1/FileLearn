@@ -128,6 +128,8 @@ function DetailsProfile(name,password,email){
     }
 }
 const h1=document.querySelector('table')
+h1.className='ìtes'
+h1.classList.add('oko')
 console.log(h1)
 
 let ok101= new DetailsProfile('ok','cioao','okok')
@@ -168,3 +170,16 @@ function fileToShow(){
 
     }
 }
+function showNotification({top = 0, right = 0, className, html}) {
+        const divNotification=document.createElement('div')
+        divNotification.className='notification'
+        divNotification.classList.add(className)
+
+        divNotification.style.top=top+'px'
+        divNotification.style.right=right+'px'
+
+        divNotification.innerHTML=html
+
+        document.body.append(divNotification)
+        divNotification.style.display='none'
+  }

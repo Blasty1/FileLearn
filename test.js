@@ -159,6 +159,7 @@ console.log(ok101.body)
 let ex= new Exercise()
 
 let test190=new ToDoStatic('Esercizio Figo')
+let table2=document.querySelector('#test2')
 
 
 function fileToShow(){
@@ -170,6 +171,11 @@ function fileToShow(){
 
     }
 }
+goo1()
+function goo1(){
+    table2.scrollIntoView(false)
+}
+window.goo1=goo1
 function showNotification({top = 0, right = 0, className, html}) {
         const divNotification=document.createElement('div')
         divNotification.className='notification'

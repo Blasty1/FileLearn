@@ -194,9 +194,16 @@ DOM
     <p  data-testo-a-cas='valore'></p> --> buona risorsa per i programmatori
     element.dataset.dataTest
 
-    list.nextElementSibiling
-    list.previousElementSibiling
-    list.parentElement
+    window.pageYOffset --> ci dice lo scroll a che punto della pagina È
+    window.pageXOffset --> stessa cosa ma in orizzontale
+
+    window.scrollBy(x,y) --> scrolla la pagina da dove ci si trova in pixel
+    window.scrollTo(x,y) --> scrolla la pagina e prende in riferimento valori assoluti
+    elementoDaVedere.scrollIntoView() --> ti porta all'elemento , facendolo vedere dall'alto e se metti false dal basso
+
+    list.nextElementSibiling --> elemento fratello successivo
+    list.previousElementSibiling elemento fratello prima
+    list.parentElement elemento padre
     TABLE
         table.rows[0].cells[0] --> to get the value of first row and first cell
     CREATE ELEMENT
@@ -222,7 +229,10 @@ DOM
             obj.style.display='none';
     Event type
             obj.addEventListener(type_of_event,function(senza parentesi)) --> applicare un evento e una funzione a una classe
+            obj.removeEvetnListener(event,function)
+            
             mouseover ->mouse ci passa sopra
+            mouseout --> quando il mouse se ne vs
             click -> se clicchiamo
             dblclick --> doppio click
 

@@ -1,6 +1,7 @@
 import { Testlo }   from '/modules.mjs.js';
 import { Exercise } from './modules.mjs.js';
 import { ToDoStatic } from './modules.mjs.js';
+import { EventButtonWelcome } from './modules.mjs.js';
 function test(){
     let test1= [1,'okok','djdjs']
     test1={
@@ -176,6 +177,12 @@ function goo1(){
     table2.scrollIntoView(false)
 }
 window.goo1=goo1
+
+let buttonTest=document.querySelector('#bottoneTest')
+let proviamoEventi=new EventButtonWelcome()
+buttonTest.addEventListener('click',proviamoEventi)
+
+
 function showNotification({top = 0, right = 0, className, html}) {
         const divNotification=document.createElement('div')
         divNotification.className='notification'

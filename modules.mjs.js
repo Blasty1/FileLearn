@@ -1,4 +1,4 @@
-export { Testlo , Exercise , ToDoStatic}
+export { Testlo , Exercise , ToDoStatic, EventButtonWelcome}
 class Testlo{
     body1 = document.querySelector('body')
     
@@ -27,6 +27,18 @@ class Testlo{
        console.log(this.body1.previousElementSibling.children)
     }
 }
+class EventButtonWelcome{
+    handleEvent(event){
+        let methodToUse='on'+event.type[0].toUpperCase()+event.type.slice(1);
+        this[methodToUse](event)    
+    }
+
+    onClick(){
+        console.log(event.srcElement.style.display='none')
+        buttonTest.style.hidden='none'
+    }
+}
+
 
 class Exercise{
     constructor(){

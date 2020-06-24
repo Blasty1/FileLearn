@@ -231,6 +231,18 @@ DOM
             obj.addEventListener(type_of_event,function(senza parentesi)) --> applicare un evento e una funzione a una classe
             obj.removeEvetnListener(event,function)
             
+            new FF() --> possiamo passare all'addEventListener una classe(nella quale possiamo mettere o una funzione o più con il nome dell'evento)
+            class ff(){
+                handleEvent(event){
+                    do_something
+                    let method='on'+ event.type[0].ToUpperCase()+ event.type.slice(1);
+                    this[method](event)
+                }
+
+                onMouseover(){
+
+                }
+            }
             mouseover ->mouse ci passa sopra
             mouseout --> quando il mouse se ne vs
             click -> se clicchiamo

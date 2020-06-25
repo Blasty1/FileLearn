@@ -44,56 +44,72 @@ class Exercise{
     constructor(){
       <!DOCTYPE HTML>
 <html>
+
 <head>
   <meta charset="utf-8">
+  <style>
+    table {
+       border-collapse: collapse;
+     }
+     th, td {
+       border: 1px solid black;
+       padding: 4px;
+     }
+     th {
+       cursor: pointer;
+     }
+     th:hover {
+       background: yellow;
+     }
+  </style>
 </head>
+
 <body>
 
-  <ul class="tree" id="tree">
-    <li>Animals
-      <ul>
-        <li>Mammals
-          <ul>
-            <li>Cows</li>
-            <li>Donkeys</li>
-            <li>Dogs</li>
-            <li>Tigers</li>
-          </ul>
-        </li>
-        <li>Other
-          <ul>
-            <li>Snakes</li>
-            <li>Birds</li>
-            <li>Lizards</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li>Fishes
-      <ul>
-        <li>Aquarium
-          <ul>
-            <li>Guppy</li>
-            <li>Angelfish</li>
-          </ul>
-        </li>
-        <li>Sea
-          <ul>
-            <li>Sea trout</li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
+  <table id="grid">
+    <thead>
+      <tr>
+        <th data-type="number">Age</th>
+        <th data-type="string">Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>5</td>
+        <td>John</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Pete</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>Ann</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Eugene</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Ilya</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    grid.addEventListener('click',test)
+
+    function test(event){
+      let table=event.target.parentElement.parentElement.parentElement);
+      if (event.target.localName !== 'th') return;
+      if(event.target.dataset.type === 'number'){
+        for(let i=0;  i < table.cells)
+      }
+    }
+  </script>
 
 </body>
-<script>
-  tree.addEventListener('click',test)
-
-  function test(event){
-    if(event.target.localName === 'li') return;
-  }
-  </script>
 </html>
     }
   

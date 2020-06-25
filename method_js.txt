@@ -192,7 +192,7 @@ DOM
 
     
     <p  data-testo-a-cas='valore'></p> --> buona risorsa per i programmatori
-    element.dataset.dataTest
+    element.dataset.testoACas
 
     window.pageYOffset --> ci dice lo scroll a che punto della pagina È
     window.pageXOffset --> stessa cosa ma in orizzontale

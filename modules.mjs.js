@@ -42,67 +42,7 @@ class EventButtonWelcome{
 
 class Exercise{
     constructor(){
-        <!DOCTYPE HTML>
-        <html>
         
-        <head>
-          <meta charset="utf-8">
-          <style>
-            body {
-              height: 2000px;
-              /* make body scrollable, the tooltip should work after the scroll */
-            }
-        
-            .tooltip {
-              /* some styles for the tooltip, you can use your own instead */
-              position: fixed;
-              padding: 10px 20px;
-              border: 1px solid #b3c9ce;
-              border-radius: 4px;
-              text-align: center;
-              font: italic 14px/1.3 sans-serif;
-              color: #333;
-              background: #fff;
-              box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
-            }
-            
-          </style>
-        </head>
-        
-        <body>
-        
-          <p>LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa</p>
-          <p>LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa LaLaLa</p>
-        
-          <button data-tooltip="the tooltip is longer than the element" id='button1'>Short button</button>
-          <button data-tooltip="HTML<br>tooltip" id='button2'>One more button</button>
-        
-          <p>Scroll the page to make buttons appear on the top, check if the tooltips show up correctly.</p>
-        
-        
-          <script>
-        
-            button1.addEventListener('mouseover',seeBox)
-        
-        
-            function seeBox(event){
-              let messageToSee=event.target.dataset.tooltip
-               let box=document.createElement('div')
-               let body=document.querySelector('body')
-               body.append(box)
-               box.append(document.createTextNode(messageToSee))
-        
-               box.className='tooltip'
-               box.getBoundingClientRect();
-               console.log(box.getBoundingClientRect().top+'px')
-        
-              box.style.top=
-              '-250px'
-            }    
-          </script>
-        
-        </body>
-        </html>
     }
   
     firstDiv(){

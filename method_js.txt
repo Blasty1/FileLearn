@@ -197,6 +197,13 @@ DOM
     window.pageYOffset --> ci dice lo scroll a che punto della pagina È
     window.pageXOffset --> stessa cosa ma in orizzontale
 
+    element.offsetHeight --> ritorna l'altezza dell'elemento
+    element.offsetWidth --> ritorna la larghezza dell'elemento 
+    element.nodeName --> ritorna il tag dell'elemento
+    event.preventDefault() --> blocca un normale evento oppure usare return false;
+
+    event.defaultPrevented --> ritorna vero se l'elemento prima ha il preventDefault
+
     window.scrollBy(x,y) --> scrolla la pagina da dove ci si trova in pixel
     window.scrollTo(x,y) --> scrolla la pagina e prende in riferimento valori assoluti
     elementoDaVedere.scrollIntoView() --> ti porta all'elemento , facendolo vedere dall'alto e se metti false dal basso
@@ -248,6 +255,7 @@ DOM
             mouseout --> quando il mouse se ne vs
             click -> se clicchiamo
             dblclick --> doppio click
+            contextmenu -> click destro del mouse
 
             input
             keydown --> quando si clicca avviene

@@ -201,6 +201,7 @@ DOM
     window.scrollTo(x,y) --> scrolla la pagina e prende in riferimento valori assoluti
     elementoDaVedere.scrollIntoView() --> ti porta all'elemento , facendolo vedere dall'alto e se metti false dal basso
 
+    elemento.getBoundingClientRect() --> oggetto con coordinate da modificare e da leggere
     list.nextElementSibiling --> elemento fratello successivo
     list.previousElementSibiling elemento fratello prima
     list.parentElement elemento padre

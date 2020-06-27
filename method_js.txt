@@ -13,7 +13,6 @@ Function(object)
 
     var new_name = function.bind(object,default_parametr) --> ritorna una funzione utilizzabile come metodo dell'oggetto
 
-https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 
 extend-- import
     export name function -->nel file del file .mjs
@@ -190,6 +189,9 @@ DOM
     list.parentNode --> rilascia l'oggetto superiore , codice html
     classList --> lista delle classi
 
+    elem.clientX --> x in base alla finestra(non calcola lo scroll)
+    elen.pageX --> x in base al documento(calcola lo scroll)
+
     
     <p  data-testo-a-cas='valore'></p> --> buona risorsa per i programmatori
     element.dataset.testoACas
@@ -207,8 +209,8 @@ DOM
     elementoDaVedere.scrollIntoView() --> ti porta all'elemento , facendolo vedere dall'alto e se metti false dal basso
 
     elemento.getBoundingClientRect() --> oggetto con coordinate da modificare e da leggere
-    list.nextElementSibiling --> elemento fratello successivo
-    list.previousElementSibiling elemento fratello prima
+    list.nextElementSibling --> elemento fratello successivo
+    list.previousElementSibling elemento fratello prima
     list.parentElement elemento padre
     TABLE
         table.rows[0].cells[0] --> to get the value of first row and first cell
@@ -235,6 +237,11 @@ DOM
             obj.remove(); --> remove a child
             obj.style.display='none';
     Event type
+            new Event('name event',{bubbles : false, cancelable:false}) --> crea un evento, bubles che prende anche i nodi inferiori, cancelable che puo essere occultato con preventDefault().
+            new CustomEvent('name',{     -->l'unica differenza con l'evento sopraindicato è che possiamo aggiungere delle proprietà
+                detail : { variabile : 1}
+            }) 
+            elemento.dispatchEvent('name-evento') --> far eseguire l'evento automaticamente su quel elemento
             obj.addEventListener(type_of_event,function(senza parentesi)) --> applicare un evento e una funzione a una classe
             obj.removeEvetnListener(event,function)
 
@@ -255,9 +262,14 @@ DOM
             }
             mouseover ->mouse ci passa sopra
             mouseout --> quando il mouse se ne vs
+            mousemove --> quando il mouse si muove
             click -> se clicchiamo
             dblclick --> doppio click
             contextmenu -> click destro del mouse
+            shiftKey --> shift button
+            altKey --> alt button
+            ctrlKey --> ctrl button
+            metaKey --> cmd for MAc
 
             input
             keydown --> quando si clicca avviene

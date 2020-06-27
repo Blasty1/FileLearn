@@ -200,9 +200,7 @@ DOM
     element.offsetHeight --> ritorna l'altezza dell'elemento
     element.offsetWidth --> ritorna la larghezza dell'elemento 
     element.nodeName --> ritorna il tag dell'elemento
-    event.preventDefault() --> blocca un normale evento oppure usare return false;
-
-    event.defaultPrevented --> ritorna vero se l'elemento prima ha il preventDefault
+    
 
     window.scrollBy(x,y) --> scrolla la pagina da dove ci si trova in pixel
     window.scrollTo(x,y) --> scrolla la pagina e prende in riferimento valori assoluti
@@ -222,6 +220,7 @@ DOM
             li.id="new_item" --> aggiungo un ig
             let get1= getComputedStyle(object) --> we can use get1 to get the value of proprietries 
             li.setAttribute('title','New Item'); --> setto gli attributi
+            li.getAttribute('name_of_attribute') --> ottengo l'attributo desiderato
             li.appendChild(document.createTextNode('Hello world')); --> creo un node 
             document.querySelectorAll('ul') --> ottengo tutti gli ul presenti nella pagina
             document.querySelector('ul.collection').appendChild(li) -->il node lo appendo al div che ci interessa
@@ -238,7 +237,10 @@ DOM
     Event type
             obj.addEventListener(type_of_event,function(senza parentesi)) --> applicare un evento e una funzione a una classe
             obj.removeEvetnListener(event,function)
-            
+
+            event.preventDefault() --> blocca un normale evento oppure usare return false;
+            event.defaultPrevented --> ritorna vero se l'elemento prima ha il preventDefault
+
             new FF() --> possiamo passare all'addEventListener una classe(nella quale possiamo mettere o una funzione o più con il nome dell'evento)
             class ff(){
                 handleEvent(event){

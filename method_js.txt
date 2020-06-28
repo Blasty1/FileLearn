@@ -261,8 +261,14 @@ DOM
                 }
             }
             mouseover ->mouse ci passa sopra
+                    event.relatedTarget --> ritorna l'elemento da cui viene prima di passare sul bottone
             mouseout --> quando il mouse se ne vs
+                event.relatedTarget --> il nuovo elemento dove va il mouse
             mousemove --> quando il mouse si muove
+
+            mouseenter --> identico a mouseover ma non si attiva con i figli dell'elemento
+            mouseleave --> identico a mouseout ma non si attiva con i figli
+
             click -> se clicchiamo
             dblclick --> doppio click
             contextmenu -> click destro del mouse

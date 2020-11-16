@@ -128,10 +128,15 @@ function DetailsProfile(name,password,email){
         stampaNameEmail : () => console.log(this.name,this.password)
     }
 }
+setTimeout(() => {
+    console.log('TESTTT10099')
+})
 const h1=document.querySelector('table')
 h1.className='ìtes'
 h1.classList.add('oko')
 console.log(h1)
+
+
 
 let ok101= new DetailsProfile('ok','cioao','okok')
 let test90=new DetailsProfile('oksdsd','cioadssdo','okodsdsdk')
@@ -182,7 +187,18 @@ let buttonTest=document.querySelector('#bottoneTest')
 let proviamoEventi=new EventButtonWelcome()
 buttonTest.addEventListener('click',proviamoEventi)
 
+buttonTest.addEventListener('keypress', testAlt)
 
+function testAlt(event){
+    console.log('okbro alt ha funzionato')
+}
+
+let textArea = document.querySelector('textarea')
+textArea.addEventListener('mousemove',testText)
+function testText(event){
+    let coords=event.clientX + ':' + event.clientY;
+    event.target.previousElementSibling.textContent=coords;    
+}
 function showNotification({top = 0, right = 0, className, html}) {
         const divNotification=document.createElement('div')
         divNotification.className='notification'

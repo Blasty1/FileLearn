@@ -13,7 +13,6 @@ Function(object)
 
     var new_name = function.bind(object,default_parametr) --> ritorna una funzione utilizzabile come metodo dell'oggetto
 
-https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 
 extend-- import
     export name function -->nel file del file .mjs
@@ -190,6 +189,9 @@ DOM
     list.parentNode --> rilascia l'oggetto superiore , codice html
     classList --> lista delle classi
 
+    elem.clientX --> x in base alla finestra(non calcola lo scroll)
+    elen.pageX --> x in base al documento(calcola lo scroll)
+
     
     <p  data-testo-a-cas='valore'></p> --> buona risorsa per i programmatori
     element.dataset.testoACas
@@ -200,17 +202,15 @@ DOM
     element.offsetHeight --> ritorna l'altezza dell'elemento
     element.offsetWidth --> ritorna la larghezza dell'elemento 
     element.nodeName --> ritorna il tag dell'elemento
-    event.preventDefault() --> blocca un normale evento oppure usare return false;
-
-    event.defaultPrevented --> ritorna vero se l'elemento prima ha il preventDefault
+    
 
     window.scrollBy(x,y) --> scrolla la pagina da dove ci si trova in pixel
     window.scrollTo(x,y) --> scrolla la pagina e prende in riferimento valori assoluti
     elementoDaVedere.scrollIntoView() --> ti porta all'elemento , facendolo vedere dall'alto e se metti false dal basso
 
     elemento.getBoundingClientRect() --> oggetto con coordinate da modificare e da leggere
-    list.nextElementSibiling --> elemento fratello successivo
-    list.previousElementSibiling elemento fratello prima
+    list.nextElementSibling --> elemento fratello successivo
+    list.previousElementSibling elemento fratello prima
     list.parentElement elemento padre
     TABLE
         table.rows[0].cells[0] --> to get the value of first row and first cell
@@ -222,6 +222,7 @@ DOM
             li.id="new_item" --> aggiungo un ig
             let get1= getComputedStyle(object) --> we can use get1 to get the value of proprietries 
             li.setAttribute('title','New Item'); --> setto gli attributi
+            li.getAttribute('name_of_attribute') --> ottengo l'attributo desiderato
             li.appendChild(document.createTextNode('Hello world')); --> creo un node 
             document.querySelectorAll('ul') --> ottengo tutti gli ul presenti nella pagina
             document.querySelector('ul.collection').appendChild(li) -->il node lo appendo al div che ci interessa
@@ -236,9 +237,17 @@ DOM
             obj.remove(); --> remove a child
             obj.style.display='none';
     Event type
+            new Event('name event',{bubbles : false, cancelable:false}) --> crea un evento, bubles che prende anche i nodi inferiori, cancelable che puo essere occultato con preventDefault().
+            new CustomEvent('name',{     -->l'unica differenza con l'evento sopraindicato è che possiamo aggiungere delle proprietà
+                detail : { variabile : 1}
+            }) 
+            elemento.dispatchEvent('name-evento') --> far eseguire l'evento automaticamente su quel elemento
             obj.addEventListener(type_of_event,function(senza parentesi)) --> applicare un evento e una funzione a una classe
             obj.removeEvetnListener(event,function)
-            
+
+            event.preventDefault() --> blocca un normale evento oppure usare return false;
+            event.defaultPrevented --> ritorna vero se l'elemento prima ha il preventDefault
+
             new FF() --> possiamo passare all'addEventListener una classe(nella quale possiamo mettere o una funzione o più con il nome dell'evento)
             class ff(){
                 handleEvent(event){
@@ -252,10 +261,21 @@ DOM
                 }
             }
             mouseover ->mouse ci passa sopra
+                    event.relatedTarget --> ritorna l'elemento da cui viene prima di passare sul bottone
             mouseout --> quando il mouse se ne vs
+                event.relatedTarget --> il nuovo elemento dove va il mouse
+            mousemove --> quando il mouse si muove
+
+            mouseenter --> identico a mouseover ma non si attiva con i figli dell'elemento
+            mouseleave --> identico a mouseout ma non si attiva con i figli
+
             click -> se clicchiamo
             dblclick --> doppio click
             contextmenu -> click destro del mouse
+            shiftKey --> shift button
+            altKey --> alt button
+            ctrlKey --> ctrl button
+            metaKey --> cmd for MAc
 
             input
             keydown --> quando si clicca avviene

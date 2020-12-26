@@ -188,6 +188,7 @@ DOM
     list.children --> otteniamo dtutti gli oggetti presenti
     list.parentNode --> rilascia l'oggetto superiore , codice html
     classList --> lista delle classi
+    classList.add / classList.remove / classList.contains
 
     elem.clientX --> x in base alla finestra(non calcola lo scroll)
     elen.pageX --> x in base al documento(calcola lo scroll)

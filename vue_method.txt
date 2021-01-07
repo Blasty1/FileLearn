@@ -5,10 +5,21 @@ v-on:event-name='namefunctiontocall' -> quando fai un determinato evento si atti
 v-bind:nameAttribute = nameVariable.
 
 to create a template, app is a appVue
-app.component('nameTemplate', {
-  props: ['variable'],
-  template: `<li>{{ variable.property }}</li>`
-})
+  app.component('nameTemplate', {
+    props: ['variable'],
+    template: `<li>{{ variable.property }}</li>`
+  })
+
+to createAppVue
+  Vue.createApp(nameApp){{
+  data(){
+  variable1 : info,
+  }
+  methods{
+  function1 : function (){dfdfdfdfsd}
+  }
+  }}
+  
 
 to use a template in html
   <nameTemplate
@@ -19,7 +30,7 @@ to use a template in html
 
 
 to relate a variable to a input or a html element
-v-model: nameVariable
+  v-model: nameVariable
 
 to create a instance and to link the vue app with a element of HtMl
-Vue.createApp(nameVueApp).mount('.classNameElementHtml')
+  Vue.createApp(nameVueApp).mount('.classNameElementHtml')

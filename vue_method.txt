@@ -3,3 +3,23 @@ v-if --> if di qualsiasi altro linguaggio
 v-for --> for di qualsiasi altro linguaggio
 v-on:event-name='namefunctiontocall' -> quando fai un determinato evento si attiva la funzione contenuta nei methods del oggetto vue
 v-bind:nameAttribute = nameVariable.
+
+to create a template, app is a appVue
+app.component('nameTemplate', {
+  props: ['variable'],
+  template: `<li>{{ variable.property }}</li>`
+})
+
+to use a template in html
+  <nameTemplate
+      v-for="item in list"
+      v-bind:nameVariable="item"
+      v-bind:key="item.id"
+    ></nameTemplate>
+
+
+to relate a variable to a input or a html element
+v-model: nameVariable
+
+to create a instance and to link the vue app with a element of HtMl
+Vue.createApp(nameVueApp).mount('.classNameElementHtml')

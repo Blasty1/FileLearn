@@ -1,5 +1,5 @@
 -   DIRETTIVE   -
-v-if --> if di qualsiasi altro linguaggio
+v-if , v-else , v-else-if --> if di qualsiasi altro linguaggio
 v-for --> for di qualsiasi altro linguaggio
 v-on:event-name='namefunctiontocall' -> quando fai un determinato evento si attiva la funzione contenuta nei methods del oggetto vue
 v-bind:nameAttribute = nameVariable.
@@ -7,6 +7,7 @@ v-bind:nameAttribute = nameVariable.
 shorthands
 v-on: --> @
 v-bind: --> :
+
 
 to create a template, app is a appVue
   app.component('nameTemplate', {
@@ -25,12 +26,28 @@ to createAppVue
   computed{
   function(){}
   }
+  
+  watch(){
+  }
+  
   }}
 
+Watch using
+  in watch function we can write all stuffs that are actioned when a changing acts.
 
 difference between computed and methods
   methods are always revaluted meanwhile computed uses cache and it is evaluted when the variable called changes.
-  
+
+computed
+  nameVariable:{
+    get{
+      return ...
+    }
+    set(newValue){
+      return ..
+    }
+   }
+
 to use variable outside HTML attribute 
 {{ variable }} //mustache
 v-bind:attributeHTML = 'variable'
@@ -48,3 +65,7 @@ to relate a variable to a input or a html element
 
 to create a instance and to link the vue app with a element of HtMl
   Vue.createApp(nameVueApp).mount('.classNameElementHtml')
+  
+To Perfomance data in HTML
+v-bind:class = "if(hasError) 'errorClass' " --> :class = { hasError : 'errorClass' }
+:class = "[class1, class2]" --> to add multiple classes

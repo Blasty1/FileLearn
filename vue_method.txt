@@ -4,6 +4,10 @@ v-for --> for di qualsiasi altro linguaggio
 v-on:event-name='namefunctiontocall' -> quando fai un determinato evento si attiva la funzione contenuta nei methods del oggetto vue
 v-bind:nameAttribute = nameVariable.
 
+shorthands
+v-on: --> @
+v-bind: --> :
+
 to create a template, app is a appVue
   app.component('nameTemplate', {
     props: ['variable'],
@@ -16,10 +20,20 @@ to createAppVue
   variable1 : info,
   }
   methods{
-  function1 : function (){dfdfdfdfsd}
+   function (){dfdfdfdfsd}
+  }
+  computed{
+  function(){}
   }
   }}
+
+
+difference between computed and methods
+  methods are always revaluted meanwhile computed uses cache and it is evaluted when the variable called changes.
   
+to use variable outside HTML attribute 
+{{ variable }} //mustache
+v-bind:attributeHTML = 'variable'
 
 to use a template in html
   <nameTemplate

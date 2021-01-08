@@ -4,6 +4,8 @@ v-for= 'item in items' or '(item,key) in items' or 'item of items'  --> for di q
 v-on:event-name='namefunctiontocall' -> quando fai un determinato evento si attiva la funzione contenuta nei methods del oggetto vue
 v-bind:nameAttribute = nameVariable.
 
+
+
 shorthands
 v-on: --> @
 v-bind: --> :
@@ -35,22 +37,28 @@ to createAppVue
 Watch using
   in watch function we can write all stuffs that are actioned when a changing acts.
 
+to create a component
+  Vue.create({}).component('name_component' , {
+    props: ['variableToUse'],
+    template : `<h4>{{ variableToUse }}</h4>` });
+    in HTML
+      <name_component :variableToUse='variable'>dsd</name_component>
+
 difference between computed and methods
   methods are always revaluted meanwhile computed uses cache and it is evaluted when the variable called changes.
-
-computed
-  nameVariable:{
-    get{
-      return ...
-    }
-    set(newValue){
-      return ..
-    }
-   }
+  computed
+    nameVariable:{
+      get{
+        return ...
+      }
+      set(newValue){
+        return ..
+      }
+     }
 
 to use variable outside HTML attribute 
-{{ variable }} //mustache
-v-bind:attributeHTML = 'variable'
+  {{ variable }} //mustache
+  v-bind:attributeHTML = 'variable'
 
 to use a template in html
   <nameTemplate
@@ -70,8 +78,8 @@ to create a instance and to link the vue app with a element of HtMl
   Vue.createApp(nameVueApp).mount('.classNameElementHtml')
   
 To Perfomance data in HTML
-v-bind:class = "if(hasError) 'errorClass' " --> :class = { hasError : 'errorClass' }
-:class = "[class1, class2]" --> to add multiple classes
+  v-bind:class = "if(hasError) 'errorClass' " --> :class = { hasError : 'errorClass' }
+  :class = "[class1, class2]" --> to add multiple classes
 
 to catch a particular event
   @nameEvent.stop
@@ -84,5 +92,17 @@ to catch a particular event
 to call a specify nameTag and event
   @nameEvent.nameTag --> @nameEvent.enter="function()"
   
-
-https://v3.vuejs.org/guide/component-basics.html#base-example
+to create a own directive v-
+  app.directive('nameDirective', {
+  // When the bound element is mounted into the DOM...
+  mounted(el,binding) {
+    // Focus the element
+    el.focus()
+    binding.value //nameVariable;
+    binding.arg //nameOpion
+    }
+  })
+  in HTML
+    v-nameDirective:[nameOption] = 'nameVariable'
+    
+https://v3.vuejs.org/guide/teleport.html#using-with-vue-components

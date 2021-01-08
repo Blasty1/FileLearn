@@ -61,7 +61,10 @@ to use a template in html
 
 
 to relate a variable to a input or a html element
-  v-model: nameVariable
+  v-model: 'nameVariable'
+  v-model.number='nameVariable' --> to cast automatically to a number
+  v-model.trim="nameVariable" --> to cast a string without spaces
+  
 
 to create a instance and to link the vue app with a element of HtMl
   Vue.createApp(nameVueApp).mount('.classNameElementHtml')
@@ -70,4 +73,16 @@ To Perfomance data in HTML
 v-bind:class = "if(hasError) 'errorClass' " --> :class = { hasError : 'errorClass' }
 :class = "[class1, class2]" --> to add multiple classes
 
-https://v3.vuejs.org/guide/list.html#maintaining-state
+to catch a particular event
+  @nameEvent.stop
+            .prevent
+            .capture
+            .self
+            .once
+            .passive
+     
+to call a specify nameTag and event
+  @nameEvent.nameTag --> @nameEvent.enter="function()"
+  
+
+https://v3.vuejs.org/guide/component-basics.html#base-example
